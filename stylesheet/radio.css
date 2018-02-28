@@ -58,13 +58,13 @@
 /*radio-list*/
 .radio-list .radio{
   display:block;
-  padding:1rem;
   border-bottom:1px solid #eee;
 }
 .radio-list .radio .label{
   padding-left:0;
   display:block;
   position:relative;
+  padding:1rem;
 }
 .radio-list .radio .label:before{
   display:none;
@@ -90,14 +90,52 @@
   height:12px;
   position: absolute;
   top: 50%;
-  right:0;
-  border: 2px solid #f00;
+  right:1rem;
+  border: 2px solid #fff;
   border-top: 0;
   border-left: 0;
   -ms-transform: rotate(45deg) scale(1);
   transform: rotate(45deg) scale(1);
   transition: all .2s ease-in-out;
-  margin-top:-12px;
+  margin-top:-10px;
+}
+.radio-list.steep .radio input:checked + .label{
+  background:none;
+}
+/*radio-button*/
+.radio-button{
+  font-size:0;
+  padding-left:1px;
+}
+.radio-button .label{
+  padding:8px 20px;
+  display:inline-block;
+  border:1px solid #DCDFE6;
+  margin-left:-1px;
+}
+.radio-button .radio{
+  margin:0;
+}
+.radio-button .label:before,.radio-button .label:after{
+  display:none;
+}
+.radio-button input:checked + .label{
+  color:#fff;
+}
+.radio-button.is-conner .radio:first-child .label{
+  border-radius:5px 0 0 5px;
+}
+.radio-button.is-conner .radio:last-child .label{
+  border-radius:0 5px 5px 0;
+}
+.radio-button.is-round .radio:first-child .label{
+  border-radius:50px 0 0 50px;
+}
+.radio-button.is-round .radio:last-child .label{
+  border-radius:0 50px 50px 0;
+}
+.radio-button.steep input:checked + .label{
+  z-index:100;
 }
 /*颜色*/
 .blue .label:after{
@@ -109,7 +147,18 @@
 .blue.steep input:checked + .label{
   color:#0078D7;
 }
-.radio-list.blue input:checked + .label:after{
+.radio-list.blue input:checked + .label{
+  background:#0078D7;
+  color:#fff;
+}
+.radio-list.blue.steep input:checked + .label{
+  color:#0078D7;
+}
+.radio-list.blue.steep input:checked + .label:after{
+  border-color:#0078D7;
+}
+.radio-button.blue input:checked + .label{
+  background-color:#0078D7;
   border-color:#0078D7;
 }
 .green .label:after{
@@ -121,32 +170,56 @@
 .green.steep input:checked + .label{
   color:#17A05E;
 }
+.radio-list.green input:checked + .label{
+  background:#17A05E;
+  color:#fff;
+}
+.radio-list.green.steep input:checked + .label{
+  color:#17A05E;
+}
+.radio-list.green.steep input:checked + .label:after{
+  border-color:#17A05E;
+}
+.radio-button.green input:checked + .label{
+  background:#17A05E;
+  border-color:#17A05E;
+}
+.radio-button.blue.steep input:checked + .label,
+.radio-button.green.steep input:checked + .label{
+  background:none;
+}
 /*尺寸*/
-.size-18 .label{
+.size-medium .label{
   padding-left:2rem;
   font-size:1.6rem;
 }
-.size-18 .label:before{
+.size-medium .label:before{
   width:18px;
   height:18px;
   margin-top:-9px;
 }
-.size-18 .label:after{
+.size-medium .label:after{
   width:10px;
   height:10px;
   margin-top:-5px;
 }
-.size-20 .label{
+.radio-button.size-medium .label{
+  padding:10px 25px;
+}
+.size-large .label{
   padding-left:2rem;
   font-size:1.8rem;
 }
-.size-20 .label:before{
+.size-large .label:before{
   width:20px;
   height:20px;
   margin-top:-10px;
 }
-.size-20 .label:after{
+.size-large .label:after{
   width:12px;
   height:12px;
   margin-top:-6px;
+}
+.radio-button.size-large .label{
+  padding:12px 30px;
 }

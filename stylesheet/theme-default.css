@@ -1,0 +1,89 @@
+.fs-16{
+  font-size:1.6rem;
+}
+.fs-18{
+  font-size:1.8rem;
+}
+/*按钮个性化*/
+.btn-default{
+  background-color:#DCDFE6;
+  border-color:#DCDFE6;
+  color:#606266;
+}
+.is-plain.btn-default{
+  background:#fff;
+}
+.btn-primary{
+  background-color:#409EFF;
+  border-color:#409EFF;
+}
+.is-outline.btn-primary{
+  color:#409EFF;
+}
+.is-plain.btn-primary{
+  background-color:#ECF5FF;
+  color:#409EFF;
+  border-color:#B3D8FF;
+}
+.btn-success{
+  background-color:#67C23A;
+  border-color:#67C23A;
+}
+.is-outline.btn-success{
+  color:#67C23A;
+}
+.is-plain.btn-success{
+  background-color:#F0F9EB;
+  color:#67C23A;
+  border-color:#C2E7B0;
+}
+.btn-info{
+  background-color:#909399;
+  border-color:#909399;
+}
+.is-outline.btn-info{
+  color:#909399;
+}
+.is-plain.btn-info{
+  background-color:#F4F4F5;
+  color:#909399;
+  border-color:#D3D4D6;
+}
+.btn-warning{
+  background-color:#E6A23C;
+  border-color:#E6A23C;
+}
+.is-outline.btn-warning{
+  color:#E6A23C;
+}
+.is-plain.btn-warning{
+  background-color:#FDF6EC;
+  color:#E6A23C;
+  border-color:#F5DAB1;
+}
+.btn-danger{
+  background-color:#F56C6C;
+  border-color:#F56C6C;
+}
+.is-outline.btn-danger{
+  color:#F56C6C;
+}
+.is-plain.btn-danger{
+  background-color:#FEF0F0;
+  color:#F56C6C;
+  border-color:#FBC4C4;
+}
+
+/* 输入框*/
+.is-border input{
+  border-color:#dcdfe6;
+}
+.is-border input:focus{
+  box-shadow:0 1px 4px #ccc;
+}
+.is-line input{
+  border-bottom-color:#dcdfe6;
+}
+.is-plain{
+  background:#eee;
+}
