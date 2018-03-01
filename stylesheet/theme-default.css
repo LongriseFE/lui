@@ -157,6 +157,27 @@
 .radio-tab.vertical.danger input:checked + .label:after{
   border-color:#F56C6C;
 }
+/*------------------checkbox主题-----------------*/
+/*primary*/
+.primary input:checked + .label:after{
+  border-color:#409EFF;
+}
+/*success*/
+.success input:checked + .label:after{
+  border-color:#67C23A;
+}
+/*info*/
+.info input:checked + .label:after{
+  border-color:#909399;
+}
+/*warning*/
+.warning input:checked + .label:after{
+  border-color:#E6A23C;
+}
+/*danger*/
+.danger input:checked + .label:after{
+  border-color:#F56C6C;
+}
 /*--------------------------------按钮主题----------------------*/
 .btn-default{
   background-color:#DCDFE6;
