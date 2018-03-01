@@ -1,4 +1,4 @@
-/*基本样式*/
+/*-------------基本样式------------*/
 .radio{
   display:inline-block;
   vertical-align: middle;
@@ -13,18 +13,20 @@
   position:relative;
   padding-left:20px;
   line-height:1;
+  transition:0.3s;
+  display:inline-block;
 }
 .radio .label:before{
   content:"";
   display:inline-block;
-  width:16px;
-  height:16px;
+  width:18px;
+  height:18px;
   border:1px solid #ccc;
   border-radius:50%;
   position:absolute;
   left:0;
   top:50%;
-  margin-top:-8px;
+  margin-top:-9px;
   box-sizing: border-box;
   transition:.3s;
 }
@@ -33,13 +35,13 @@
   display:inline-block;
   border-radius:50%;
   position:absolute;
-  width:8px;
-  height:8px;
+  width:10px;
+  height:10px;
   background:#ccc;
   left:4px;
   top:50%;
   opacity:0;
-  margin-top:-4px;
+  margin-top:-5px;
   -webkit-transform:scale(0);
   transform:scale(0);
   transition:all .2s ease-in-out;
@@ -58,13 +60,16 @@
 /*radio-list*/
 .radio-list .radio{
   display:block;
-  border-bottom:1px solid #eee;
 }
 .radio-list .radio .label{
   padding-left:0;
   display:block;
   position:relative;
   padding:1rem;
+  border-bottom:1px solid #DCDFE6;
+}
+.radio-list .radio:last-child .label{
+  border:none;
 }
 .radio-list .radio .label:before{
   display:none;
@@ -137,89 +142,123 @@
 .radio-button.steep input:checked + .label{
   z-index:100;
 }
-/*颜色*/
-.blue .label:after{
-  background:#0078D7;
-}
-.blue input:checked + .label:before{
-  border-color:#0078D7;
-}
-.blue.steep input:checked + .label{
-  color:#0078D7;
-}
-.radio-list.blue input:checked + .label{
-  background:#0078D7;
-  color:#fff;
-}
-.radio-list.blue.steep input:checked + .label{
-  color:#0078D7;
-}
-.radio-list.blue.steep input:checked + .label:after{
-  border-color:#0078D7;
-}
-.radio-button.blue input:checked + .label{
-  background-color:#0078D7;
-  border-color:#0078D7;
-}
-.green .label:after{
-  background:#17A05E;
-}
-.green input:checked + .label:before{
-  border-color:#17A05E;
-}
-.green.steep input:checked + .label{
-  color:#17A05E;
-}
-.radio-list.green input:checked + .label{
-  background:#17A05E;
-  color:#fff;
-}
-.radio-list.green.steep input:checked + .label{
-  color:#17A05E;
-}
-.radio-list.green.steep input:checked + .label:after{
-  border-color:#17A05E;
-}
-.radio-button.green input:checked + .label{
-  background:#17A05E;
-  border-color:#17A05E;
-}
-.radio-button.blue.steep input:checked + .label,
-.radio-button.green.steep input:checked + .label{
+.radio-button.primary.steep input:checked + .label,
+.radio-button.success.steep input:checked + .label{
   background:none;
 }
-/*尺寸*/
-.size-medium .label{
-  padding-left:2rem;
-  font-size:1.6rem;
+/*radio-tab*/
+.radio-tab{
+  border-bottom:1px solid #DCDFE6;
 }
-.size-medium .label:before{
+.radio-tab .radio{
+  margin-right:5px;
+}
+.radio-tab .label{
+  padding:10px 1em;
+  border-bottom:2px solid transparent;
+  position:relative;
+  top:1px;
+}
+.radio-tab .label:before,.radio-tab .label:after{
+  display:none;
+}
+.radio-tab.full{
+  display:flex;
+  display:-webkit-flex;
+  flex-direction: row;
+}
+.radio-tab.full .radio{
+  flex:1;
+  -webkit-flex: 1;
+  text-align:center;
+}
+.radio-tab.vertical{
+  border:none;
+}
+.radio-tab.vertical .radio{
+  display:block;
+  border-bottom:1px solid #DCDFE6;
+}
+.radio-tab.vertical .label{
+  display:block;
+}
+.radio-tab.vertical.primary .label:after{
+  content:"";
+  display:inline-block;
+  width:10px;
+  height:10px;
+  border-radius:0;
+  border-color:#fff;
+  background:none;
+  position:absolute;
+  right:10px;
+  left:auto;
+  top:50%;
+  margin-top:-5px;
+  border-style: solid;
+  border-width:0;
+  border-right-width: 1px;
+  border-bottom-width:1px;
+  transform:rotate(-45deg);
+}
+/*--------------------尺寸-------------*/
+/*mini*/
+.mini .label{
+  padding-left:20px;
+  font-size:1.2rem;
+}
+.mini .label:before{
+  width:16px;
+  height:16px;
+  margin-top:-8px;
+}
+.mini .label:after{
+  width:8px;
+  height:8px;
+  margin-top:-4px;
+}
+/*small*/
+.small .label{
+  padding-left:22px;
+  font-size:1.4rem;
+}
+.small .label:before{
   width:18px;
   height:18px;
   margin-top:-9px;
 }
-.size-medium .label:after{
+.small .label:after{
   width:10px;
   height:10px;
   margin-top:-5px;
 }
-.radio-button.size-medium .label{
-  padding:10px 25px;
+/*medium*/
+.medium .label{
+  padding-left:24px;
+  font-size:1.5rem;
 }
-.size-large .label{
-  padding-left:2rem;
-  font-size:1.8rem;
-}
-.size-large .label:before{
+.medium .label:before{
   width:20px;
   height:20px;
   margin-top:-10px;
 }
-.size-large .label:after{
+.medium .label:after{
   width:12px;
   height:12px;
   margin-top:-6px;
 }
-.radio-button.size-large .label{
-  padding:12px 30px;
+/*large*/
+.large .label{
+  padding-left:28px;
+  font-size:1.6rem;
+}
+.large .label:before{
+  width:24px;
+  height:24px;
+  margin-top:-12px;
+}
+.large .label:after{
+  width:16px;
+  height:16px;
+  margin-top:-8px;
 }
